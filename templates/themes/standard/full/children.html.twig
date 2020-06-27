@@ -1,0 +1,28 @@
+{% extends '@ezdesign/dashboard_layout.html.twig' %}
+
+{% block inner_content %}
+    {% if content_list.totalCount %}
+        <div class="row">Found <strong>{{ content_list.totalCount }}</strong> Content items</div>
+    <ul>
+        {% for content in content_list %}
+            <li>
+                {{ content.contentInfo.contentType.name }}:
+                {{ render(
+                    controller(
+                        "ez_content:viewAction",
+                        {
+                            'contentId': content.id,
+                            'viewType': 'embed-inline',
+                            'layout': false
+                        }
+                    )
+                ) }}
+            </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <div class="row">
+            There's no content.
+        </div>
+    {% endif %}
+{% endblock %}

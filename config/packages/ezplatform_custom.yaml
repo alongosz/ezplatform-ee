@@ -1,0 +1,14 @@
+ezplatform:
+    system:
+        site_group:
+            content_view:
+                full:
+                    children:
+                        match:
+                            Identifier\ContentType: folder
+                        controller: App\Controller\ChildrenController::showChildrenAction
+                        template: '@ezdesign/full/children.html.twig'
+        pl:
+            languages: [pol-PL, eng-GB]
+        en:
+            languages: [eng-GB]
