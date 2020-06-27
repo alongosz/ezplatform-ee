@@ -84,14 +84,14 @@ ezplatform:
                 varnish_invalidate_token: '%varnish_invalidate_token%'
 
         site:
-            languages: [eng-GB]
+            languages: [pol-PL,fre-FR,eng-GB,ger-DE,ita-IT,esl-ES,por-PT,ukr-UA,swe-SE,nor-NO,fin-FI,dan-DK,cro-HR]
 
         admin_group:
             # System languages. Note that by default, content, content types, and other data are in eng-GB locale,
             # so removing eng-GB from this list may lead to errors or content not being shown, unless you change
             # all eng-GB data to other locales first.
             # For admin this needs to contain all languages you want to translate content to on the given repository.
-            languages: [eng-GB]
+            languages: [pol-PL,fre-FR,eng-GB,ger-DE,ita-IT,esl-ES,por-PT,ukr-UA,swe-SE,nor-NO,fin-FI,dan-DK,cro-HR]
             page_builder:
                 siteaccess_list: [site]
             content_tree_module:

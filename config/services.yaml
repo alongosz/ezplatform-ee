@@ -5,7 +5,7 @@
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: 'en'
-
+    ezplatform.behat.enable_enterprise_services: true
 services:
     # default configuration for services in *this* file
     _defaults:

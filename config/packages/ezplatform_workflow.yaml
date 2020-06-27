@@ -1,0 +1,128 @@
+ezplatform:
+    system:
+        default:
+            workflows:
+                workflow1:
+                    name: Quick Review1
+                    matchers:
+                        # Which Content Types can use this workflow
+                        content_type: ['volume_short_article']
+                        # Which status of the Content item can use this workflow. Available statuses are draft and published.
+                    stages:
+                        draft:
+                            label: Draft
+                        review:
+                            label: Quick review
+                        done:
+                            label: Done
+                            last_stage: true
+                    initial_stage: draft
+                    transitions:
+                        to_review:
+                            from: draft
+                            to: review
+                            label: Send to review
+                            icon: '/bundles/ezplatformadminui/img/ez-icons.svg#comment'
+                        re_review:
+                            from: review
+                            to: review
+                            label: Send to review
+                            icon: '/bundles/ezplatformadminui/img/ez-icons.svg#comment'
+                        done:
+                            from: review
+                            to: done
+                        edit:
+                            reverse: done
+                workflow2:
+                    name: Quick Review2
+                    matchers:
+                        # Which Content Types can use this workflow
+                        content_type: ['volume_long_article']
+                        # Which status of the Content item can use this workflow. Available statuses are draft and published.
+                    stages:
+                        draft:
+                            label: Draft
+                        review:
+                            label: Quick review
+                        done:
+                            label: Done
+                            last_stage: true
+                    initial_stage: draft
+                    transitions:
+                        to_review:
+                            from: draft
+                            to: review
+                            label: Send to review
+                            icon: '/bundles/ezplatformadminui/img/ez-icons.svg#comment'
+                        re_review:
+                            from: review
+                            to: review
+                            label: Send to review
+                            icon: '/bundles/ezplatformadminui/img/ez-icons.svg#comment'
+                        done:
+                            from: review
+                            to: done
+                        edit:
+                            reverse: done
+                workflow3:
+                    name: Quick Review3
+                    matchers:
+                        # Which Content Types can use this workflow
+                        content_type: ['volume_form']
+                        # Which status of the Content item can use this workflow. Available statuses are draft and published.
+                    stages:
+                        draft:
+                            label: Draft
+                        review:
+                            label: Quick review
+                        done:
+                            label: Done
+                            last_stage: true
+                    initial_stage: draft
+                    transitions:
+                        to_review:
+                            from: draft
+                            to: review
+                            label: Send to review
+                            icon: '/bundles/ezplatformadminui/img/ez-icons.svg#comment'
+                        re_review:
+                            from: review
+                            to: review
+                            label: Send to review
+                            icon: '/bundles/ezplatformadminui/img/ez-icons.svg#comment'
+                        done:
+                            from: review
+                            to: done
+                        edit:
+                            reverse: done
+                workflow4:
+                    name: Quick Review4
+                    matchers:
+                        # Which Content Types can use this workflow
+                        content_type: ['volume_page']
+                        # Which status of the Content item can use this workflow. Available statuses are draft and published.
+                    stages:
+                        draft:
+                            label: Draft
+                        review:
+                            label: Quick review
+                        done:
+                            label: Done
+                            last_stage: true
+                    initial_stage: draft
+                    transitions:
+                        to_review:
+                            from: draft
+                            to: review
+                            label: Send to review
+                            icon: '/bundles/ezplatformadminui/img/ez-icons.svg#comment'
+                        re_review:
+                            from: review
+                            to: review
+                            label: Send to review
+                            icon: '/bundles/ezplatformadminui/img/ez-icons.svg#comment'
+                        done:
+                            from: review
+                            to: done
+                        edit:
+                            reverse: done
