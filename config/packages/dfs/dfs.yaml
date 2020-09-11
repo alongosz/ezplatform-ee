@@ -1,15 +1,18 @@
+parameters:
+    env(DFS_DATABASE_URL): '%env(resolve:DATABASE_URL)%'
+
 # new doctrine connection for the dfs legacy_dfs_cluster metadata handler.
 doctrine:
     dbal:
         connections:
             dfs:
-                driver: "%dfs_database_driver%"
-                host: "%dfs_database_host%"
-                port: "%dfs_database_port%"
-                user: "%dfs_database_user%"
-                password: "%dfs_database_password%"
-                dbname: "%dfs_database_name%"
-                charset: utf8mb4
+                # configure these for your database server
+                driver: '%dfs_database_driver%'
+                charset: '%dfs_database_charset%'
+                default_table_options:
+                    charset: '%dfs_database_charset%'
+                    collate: '%dfs_database_collation%'
+                url: '%env(resolve:DFS_DATABASE_URL)%'
 
 # define the flysystem handler
 oneup_flysystem:
